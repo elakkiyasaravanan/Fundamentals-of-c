@@ -94,3 +94,26 @@ int main()
     printf("\nno of special character %d",splchar);
     return 0;
 }
+7. Write a program in C to copy one string to another string.
+
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    char str1[50],str2[50];
+    int i=0;
+    scanf("%s",str1);
+    while(str1[i]!='\0')
+    {
+        str2[i]=str1[i];
+        i++;
+    }
+    str2[i]='\0';
+    
+    printf("first string is %s",str1);
+    printf("\ncopied string is %s",str2);
+
+    return 0;
+}
+
