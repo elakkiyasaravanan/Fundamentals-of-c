@@ -197,8 +197,10 @@ printf("%d\n",A);
     else if(a%3==0 && a%5==0)
         printf("HiHello");
     return 0;}
-Given an integer value, check the given input is divisible by 3. If it is divisible print the message "The number is divisible by 3".if it is not divisible print the message "The number is not divisible by 3 and gives a remainder _".
- int a;
+14.Given an integer value, check the given input is divisible by 3. If it is divisible print the message "The number is divisible by 3".if it is not divisible print the message "The number is not divisible by 3 and gives a remainder _".
+#include<stdio.h>
+    int main(){ 
+    int a;
     scanf("%d",&a);
     if(a%3==0)
     {
@@ -208,9 +210,11 @@ Given an integer value, check the given input is divisible by 3. If it is divisi
     {
         printf("The number is not divisible by 3 and gives a remainder %d",a);
     }
-    return 0;
-Find the sum of even numbers in the given range.
-int n,m=1,sum=0;
+    return 0;}
+15.Find the sum of even numbers in the given range.
+    #include<stdio.h>
+    int main(){
+    int n,m=1,sum=0;
     scanf("%d",&n);
     while(m<=n)
     {
@@ -221,28 +225,34 @@ int n,m=1,sum=0;
         m++;
     }
     printf("%d",sum);
-Print all the alphabets for given n times.
-int n,i=1;
+    }
+16.Print all the alphabets for given n times.
+#include<stdio.h>
+    int main(){
+    int n,i=1;
     scanf("%d",&n);
     while(i<=n)
     {
         printf("a b c d e f g h i j k l m n o p q r s t u v w x y z\n");
         i++;
     }
-
-
-
-
-Print all the numbers from given range.
-int n,m;
+return 0;
+}
+17.Print all the numbers from given range.
+    #include<stdio.h>
+    int main(){
+    int n,m;
     scanf("%d %d",&n,&m);
     while(n<=m)
     {
          printf("%d ",n);
         n++;
     }
-Print all the numbers from 1 to n.
-int n,m;
+}
+18.Print all the numbers from 1 to n.
+#include<stdio.h>
+    int main(){
+    int n,m;
     scanf("%d ",&n);
     m=1;
     while(m<=n)
@@ -250,8 +260,11 @@ int n,m;
         printf("%d ",m);
         m++;
     }
-Print the sum of nos from 1 to n.
-int a,m=0,i=1;
+}
+19.Print the sum of nos from 1 to n.
+#include<stdio.h>
+    int main(){
+    int a,m=0,i=1;
     scanf("%d",&a);
     while(i<=a)
     {
@@ -259,8 +272,11 @@ int a,m=0,i=1;
         i++;
     }
     printf("%d",m);
-Print the product of All numbers from 1 to n. (factorial of a Number)
-int a,p=1,i=1;
+}
+20.Print the product of All numbers from 1 to n. (factorial of a Number)
+#include<stdio.h>
+    int main(){
+    int a,p=1,i=1;
     scanf("%d",&a);
     while(i<=a)
     {
@@ -268,4 +284,6 @@ int a,p=1,i=1;
         i++;
     }
     printf("%d",p);
+}
+
 
