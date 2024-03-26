@@ -1,0 +1,271 @@
+1.Based on the given marks, print the corresponding grade according to the following conditions Given a particular marks, a grade is calculated as per the following table: Score Grade 1. marks>=91 A 2. 76<=marks<=90 B 3. 61<=marks<=75 C 4. marks<=60 D
+    #include<stdio.h>
+    int main(){
+    int a;
+    scanf("%d",&a);
+    if (a>=0 && a<=100)
+    {
+        if(a>=91)
+            printf("Grade A");
+        else if(a>=76 && a<=90)
+            printf("Grade B");
+        else if(a>=61 && a<=75)
+            printf("Grade C");
+        else if(a<=60)
+            printf("Grade D");
+            return 0;}
+2.Given a student's mark as input,print output as Pass/Fail based on the input mark < 35 - Fail mark>=35- Pass
+    #include<stdio.h>
+    int main(){
+    int mark;
+    scanf("%d",&mark);
+    if(mark>=35)
+        printf("Pass");
+    else if(mark < 35)
+        printf("Fail");
+    return 0;}
+3.Write a program to check whether the given three sides can form a triangle or not.
+    #include<stdio.h>
+    int main(){
+    int a,b,c;
+    scanf("%d %d %d",&a,&b,&c);
+    if((a+b>c)&&(a+c>b)&&(b+c>a))
+        printf("Valid");
+    else
+        printf("Not Valid");
+    return 0;}
+4.Check whether the given character is a Vowel or Consonant
+    #include<stdio.h>
+    int main(){
+    char n ,l,u;
+    scanf("%c",&n);
+    l=(n== 'a'||n=='e'||n=='i'||n=='o'||n=='u');
+    u=(n== 'A'||n=='E'||n=='I'||n=='O'||n=='U');
+    if(l||u)
+        printf("Vowel");
+    else
+        printf("Consonant");
+    return 0;}
+5.Check whether the given character is an alphabet or a number or special character
+    #include<stdio.h>
+    int main(){
+    char ch;
+    scanf("%c",&ch);
+    if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+        printf("ALPHABET");
+    else if (ch>='0' && ch<='9')
+        printf("NUMBER");
+    else
+        printf("SPECIAL CHARACTER");
+    return 0;}
+6.Check whether the given character is in upper case or lower case
+    #include<stdio.h>
+    int main(){
+    char ch;
+    scanf("%c",&ch);
+    if(ch>='a'&& ch<='z')
+        printf("LOWERCASE");
+    else if (ch>='A'&& ch<='Z')
+        printf("UPPERCASE");
+    return 0;}
+7.Write a program to Based on the given x and y value, calculate the quadrant in which the point is present
+    #include<stdio.h>
+    int main(){
+    int a,b;
+    scanf("%d %d",&a,&b);
+    if(a > 0 && b > 0)
+        printf("Point lies in the First quandrant");
+    else if(a < 0 && b > 0)
+        printf("Point lies in the Second quandrant");
+    else if(a < 0 && b < 0)
+        printf("Point lies in the Third quandrant");
+    else if(a == 0 && b == 0)
+        printf("Point lies at the origin");
+    else if (a > 0 && b < 0)
+        printf("Point lies in the Fourth quandrant");
+    return 0;}
+8.Write a program to Check Odd or Even without Using Arithmetic Operators
+    #include<stdio.h>
+    int main(){
+    int a;
+    scanf("%d",&a);
+    if(a%2==0)
+        printf("Even");
+    else
+        printf("Odd");
+    return 0;}
+9.Write a program to print the vales from 1 to n. Use goto statement to perform looping operation
+#include<stdio.h>
+int main() {
+int A=1;
+    int n;
+    scanf("%d",&n);
+   COND:
+printf("%d\n",A);
+    A++;
+    if(A<=n)
+        goto COND;  
+    return 0;
+}
+10.Write a program to find a specific date ,check wheteher the date is Valid or Not . Year will be in rangen 1900 to 9999
+    #include<stdio.h>
+  int main(){
+    int dd,m,yy;
+    scanf("%d/%d/%d",&dd,&m,&yy);
+    if(yy>=1900 && yy<=9999)
+    {
+        if(( dd>=01 && dd<=31) && (m==1 || m==3 || m==5 || m==7 || m==8 || m==10 || m==12))
+            printf("Valid");
+        else if ((dd>=01 && dd<=30 ) && (m==4 || m==6 || m==8 || m==9 || m==11))
+            printf("Valid");
+        else if((dd>=01 && dd<=28) && m==2)
+            printf("Valid");
+        else if((dd==29 && m==2) && (yy%400==0 || (yy%4==0 && yy%100!=0 )))
+            printf("Valid");
+        else (printf("Invalid"));
+    }
+    else
+        printf("Invalid");
+    return 0;}
+11.Write a program to print the respective month name based on given input
+   #include<stdio.h>
+    int main(){
+   int monno;
+   scanf("%d",&monno);
+   switch(monno)
+   {
+    case 1:
+           printf("January\n");
+           break;
+    case 2:
+           printf("February\n");
+           break;
+    case 3:
+           printf("March\n");
+           break;
+    case 4:
+           printf("April\n");
+           break;
+    case 5:
+           printf("May\n");
+           break;
+    case 6:
+           printf("June\n");
+           break;
+    case 7:
+           printf("July\n");
+           break;
+    case 8:
+           printf("August\n");
+           break;
+    case 9:
+           printf("September\n");
+           break;
+    case 10:
+           printf("October\n");
+           break;
+    case 11:
+           printf("November\n");
+           break;
+    case 12:
+           printf("December\n");
+           break;
+    default:
+           printf("Invalid");
+           break;
+      }
+    return 0;}
+12.Write a program to check whether the time is valid or not
+  #include<stdio.h>
+  int main(){
+  int h , m ,s;
+  scanf("%d : %d : %d",&h,&m,&s);
+       if((h>=0 && h<12)&&(m>=0 &&m <60)&&(s>=0 && s<60))
+                             printf("Valid");
+       else
+                             printf("Not Valid");
+    return 0;}
+13.Given an integer value, if it is divisible by 3 print “Hi”, if it is divisible by 5 print “Hello”. If it is divisible by both print “HiHello”
+    #include<stdio.h>
+    int main(){
+    int a;
+    scanf("%d",&a);
+    if(a%3==0&&a%5!=0)
+        printf("Hi");
+    else if(a%5==0&&a%3!=0)
+        printf("Hello");
+    else if(a%3==0 && a%5==0)
+        printf("HiHello");
+    return 0;}
+Given an integer value, check the given input is divisible by 3. If it is divisible print the message "The number is divisible by 3".if it is not divisible print the message "The number is not divisible by 3 and gives a remainder _".
+ int a;
+    scanf("%d",&a);
+    if(a%3==0)
+    {
+        printf("The number is divisible by 3",a);
+    }
+    else if(a=a%3)
+    {
+        printf("The number is not divisible by 3 and gives a remainder %d",a);
+    }
+    return 0;
+Find the sum of even numbers in the given range.
+int n,m=1,sum=0;
+    scanf("%d",&n);
+    while(m<=n)
+    {
+        if(m%2==0)
+        {
+            sum+=m;
+        }
+        m++;
+    }
+    printf("%d",sum);
+Print all the alphabets for given n times.
+int n,i=1;
+    scanf("%d",&n);
+    while(i<=n)
+    {
+        printf("a b c d e f g h i j k l m n o p q r s t u v w x y z\n");
+        i++;
+    }
+
+
+
+
+Print all the numbers from given range.
+int n,m;
+    scanf("%d %d",&n,&m);
+    while(n<=m)
+    {
+         printf("%d ",n);
+        n++;
+    }
+Print all the numbers from 1 to n.
+int n,m;
+    scanf("%d ",&n);
+    m=1;
+    while(m<=n)
+    {
+        printf("%d ",m);
+        m++;
+    }
+Print the sum of nos from 1 to n.
+int a,m=0,i=1;
+    scanf("%d",&a);
+    while(i<=a)
+    {
+        m=m+i;
+        i++;
+    }
+    printf("%d",m);
+Print the product of All numbers from 1 to n. (factorial of a Number)
+int a,p=1,i=1;
+    scanf("%d",&a);
+    while(i<=a)
+    {
+        p=p*i;
+        i++;
+    }
+    printf("%d",p);
+
