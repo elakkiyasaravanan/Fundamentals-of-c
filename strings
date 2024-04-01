@@ -117,3 +117,34 @@ int main()
     return 0;
 }
 
+8.An online book reading community's grid displays books in a specific format. Only one batch of books is displayed at a time and each batch of books is recognized as a string tagged a-z. Each character of the string denotes the initials of the book's author. The community has decided to change the format of the display grid but before they can do this, they need to know the number of unique author's initials present in the given batch of books. The unique author's initials are the initials that appear only once in the batch of books represented as a string.
+
+Write an algorithm to help the community find the count of unique author's initials present in the given batch of books.
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[50];
+    scanf("%s",str);
+    int count=0;
+    int n = strlen(str);
+    for(int i=0;i<n;i++)
+    {
+        int a=0;
+        for(int j=0;j<n;j++)
+        {
+        if(str[i]==str[j]&&i!=j)
+        {
+             a=1;
+             break;
+        }
+    }
+    if(a==0)
+    {
+    count++;
+    }
+    }
+        printf("%d",count);
+        return 0;
+}
+
